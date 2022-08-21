@@ -1,3 +1,4 @@
+/* GENERAL */
 * {
   margin: 0;
   padding: 0;
@@ -55,24 +56,28 @@ nav a:hover {
   padding: 27px 20px;
 }
 
-.welcome-banner {
+.cover {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url('../assets/welcome.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   height: 600px;
 }
-.welcome-banner h2 {
+.cover h2 {
   font-size: 1.5em;
   padding: 10px;
   margin-bottom: 30px;
   width: 80%;
   text-align: center;
   border-radius: 5px;
+}
+
+/* HOME PAGE */
+.welcome-banner {
+  background-image: url('../assets/welcome.jpg');
 }
 .welcome-banner .button {
   color: #396d7c;
@@ -143,7 +148,14 @@ footer {
   clear: both;
 }
 
+/* PHOTOGRAPHY PAGE */
+.photo-banner {
+  background-image: url('../assets/photography.jpg');
+}
+
+/* RESPONSIVE TABLET */
 @media only screen and (min-width: 401px) {
+  /* GENERAL */
   nav a {
     font-size: 0.75em;
   }
@@ -151,6 +163,7 @@ footer {
     padding: 30px 20px;
   }
 
+  /* HOME PAGE */
   .welcome-banner {
     height: 700px;
   }
@@ -161,14 +174,20 @@ footer {
   .links {
     flex-direction: row;
   }
+
+  /* PHOTOGRAPHY PAGE */
+
 }
 
+/* RESPONSIVE COMPUTER */
 @media only screen and (min-width: 901px) {
+  /* GENERAL */
   nav a {
     font-size: 1em;
     padding: 15px 20px;
   }
 
+  /* HOME PAGE */
   .welcome-banner {
     height: 800px;
   }
@@ -193,4 +212,7 @@ footer {
     width: 250px;
     margin: 10px 20px 20px 10px;
   }
+
+  /* PHOTOGRAPHY PAGE */
+
 }
