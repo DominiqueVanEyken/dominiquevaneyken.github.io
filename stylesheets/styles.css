@@ -17,12 +17,21 @@ body {
   background-color: #dcf3ff;
   font-family: "calibri", sans-serif;
   font-size: 20px;
-  overflow: hidden;
+  overflow-x: hidden;
+  /* overflow: hidden; */
 }
 
 h2 {
+  width: 100%;
   color: #dcf3ff;
   background-color: #257ca3;
+  font-size: 1em;
+  padding: 5px 10px;
+}
+h3 {
+  width: 100%;
+  color: #396d7c;
+  background-color: #a2d2df;
   font-size: 1em;
   padding: 5px 10px;
 }
@@ -143,6 +152,15 @@ article header {
 #about-me > p:nth-of-type(3) {order: 4;}
 #about-me > p:nth-of-type(4) {order: 5;}
 
+.photo-me {
+  display: flex;
+  flex-direction: column;
+}
+.photo-me img {
+  max-width: 100%;
+  margin-bottom: 5px;
+}
+
 footer {
   height: 50px;
   background-color: #257ca3;
@@ -158,7 +176,19 @@ footer {
   font-size: 1em;
 }
 
-/* article */
+.portfolio-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.portfolio-item {
+  display: flex;
+  flex-direction: column;
+}
+.portfolio-item img {
+  max-width: 100%;
+  margin-bottom: 5px;
+}
 
 /* CLIMBING PAGE */
 .climb-banner {
@@ -167,6 +197,17 @@ footer {
 .climb-banner h2 {
   font-size: 1em;
 }
+
+#about-climbing img {
+  width: 100%;
+  order: 3;
+  align-self: center;
+}
+#about-climbing > p:nth-of-type(1) {order: 1;}
+#about-climbing > p:nth-of-type(2) {order: 2;}
+#about-climbing > p:nth-of-type(3) {order: 4;}
+#about-climbing > p:nth-of-type(4) {order: 5;}
+#about-climbing > p:nth-of-type(5) {order: 6;}
 
 /* RESPONSIVE TABLET */
 @media only screen and (min-width: 401px) {
@@ -192,6 +233,25 @@ footer {
     font-size: 80%;
   }
 
+  .photo-me {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .photo-me h3 {
+    flex: 1 0 100%;
+  }
+  .photo-me img {
+    max-width: 50%;
+  }
+  .photo-me img:nth-of-type(odd) {
+    padding-right: 2.5px;
+  }
+  .photo-me img:nth-of-type(even) {
+    padding-left: 2.5px;
+  }
+
   /* PHOTOGRAPHY PAGE */
   .photo-banner {
     max-height: none;
@@ -200,10 +260,34 @@ footer {
     font-size: 1.5em;
   }
 
+  .portfolio-item {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .portfolio-item h3 {
+    flex: 1 0 100%;
+  }
+  .portfolio-item img {
+    max-width: 50%;
+  }
+  .portfolio-item img:nth-of-type(odd) {
+    padding-right: 2.5px;
+  }
+  .portfolio-item img:nth-of-type(even) {
+    padding-left: 2.5px;
+  }
+
   /* CLIMBING PAGE */
   .climb-banner h2 {
     font-size: 1.5em;
   }
+
+  #about-climbing img {
+    width: 75%;
+  }
+
 }
 
 /* RESPONSIVE COMPUTER */
@@ -238,19 +322,33 @@ footer {
     display: block;
   }
 
-  article > p:first-of-type {
-    order: 1;
-  }
-
   #about-me img {
     float: right;
     width: 250px;
     margin: 10px 20px 20px 10px;
   }
 
+  .photo-me {
+    clear: both;
+  }
+  .photo-me img {
+    width: 33.33%;
+    padding: 0 2.5px;
+  }
+
   /* PHOTOGRAPHY PAGE */
   .photo-banner h2 {
     font-size: 2em;
+  }
+
+  /* .portfolio-container h2 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 5px;
+  } */
+  .portfolio-item img {
+    max-width: 25%;
+    padding: 0 2.5px;
   }
 
   /* CLIMBING PAGE */
@@ -259,5 +357,14 @@ footer {
   }
   .climb-banner h2 {
     font-size: 2em;
+  }
+
+  #about-climbing {
+    display: block;
+  }
+  #about-climbing img {
+    float: right;
+    width: 250px;
+    margin: 10px 20px 20px 10px;
   }
 }
